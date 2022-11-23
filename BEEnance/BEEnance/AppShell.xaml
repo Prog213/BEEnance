@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+       xmlns:local="clr-namespace:BEEnance.Views"
+       Title="BEEnance"
+       x:Class="BEEnance.AppShell"
+           BackgroundColor="{AppThemeBinding 
+                    Dark={StaticResource WindowBackgroundColorDark}, 
+                    Light={StaticResource WindowBackgroundColor}}">
+
+    <!--
+        The overall app visual hierarchy is defined here, along with navigation.
+    
+        https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/
+    -->
+
+    <Shell.Resources>
+        <ResourceDictionary>
+
+            <Color x:Key="tabbarbackground">#FFFF74</Color>
+            <Color x:Key="tabbarbackgrounddark">black</Color>
+            <Color x:Key="texttabbardark">#FFFF74</Color>
+            <Color x:Key="texttabbar">black</Color>
+            
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="White" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{AppThemeBinding 
+                    Dark={StaticResource tabbarbackgrounddark}, 
+                    Light={StaticResource tabbarbackground}}" />
+                <Setter Property="Shell.ForegroundColor" Value="black" />
+                <Setter Property="Shell.TitleColor" Value="Black" />
+                <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="white"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="{AppThemeBinding Dark={StaticResource texttabbardark},
+                    Light={StaticResource texttabbar}}"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="{AppThemeBinding Dark={StaticResource texttabbardark},
+                    Light={StaticResource texttabbar}}"/>
+            </Style>
+            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <TabBar>
+        <ShellContent Title="Аналітика" Icon="img1.png" Route="AnalPage" ContentTemplate="{DataTemplate local:AnalPage}" />
+        <ShellContent Title="Платежі" Icon="transfer.png" ContentTemplate="{DataTemplate local:AnalPage}" />
+        <ShellContent Title="+ / -" Icon="honey.png" ContentTemplate="{DataTemplate local:AnalPage}" />
+        <ShellContent Title="Нотатки" Icon="writing.png" ContentTemplate="{DataTemplate local:AnalPage}" />
+        <ShellContent Title="Профіль" Icon="user.png" ContentTemplate="{DataTemplate local:AnalPage}" />
+    </TabBar>
+
+    <!--
+        If you would like to navigate to this content you can do so by calling
+        await Shell.Current.GoToAsync("//LoginPage");
+    -->
+    <TabBar>
+        <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}" />
+    </TabBar>
+
+
+</Shell>

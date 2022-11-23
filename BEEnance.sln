@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BEEnance.Android", "BEEnance\BEEnance.Android\BEEnance.Android.csproj", "{E7E6CEC4-6118-4035-BF6C-5F66203D5016}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BEEnance", "BEEnance\BEEnance\BEEnance.csproj", "{ED14BBC4-C1E7-4D0A-8E04-61686843509E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E7E6CEC4-6118-4035-BF6C-5F66203D5016}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7E6CEC4-6118-4035-BF6C-5F66203D5016}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7E6CEC4-6118-4035-BF6C-5F66203D5016}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E7E6CEC4-6118-4035-BF6C-5F66203D5016}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7E6CEC4-6118-4035-BF6C-5F66203D5016}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7E6CEC4-6118-4035-BF6C-5F66203D5016}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{ED14BBC4-C1E7-4D0A-8E04-61686843509E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED14BBC4-C1E7-4D0A-8E04-61686843509E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED14BBC4-C1E7-4D0A-8E04-61686843509E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{ED14BBC4-C1E7-4D0A-8E04-61686843509E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED14BBC4-C1E7-4D0A-8E04-61686843509E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED14BBC4-C1E7-4D0A-8E04-61686843509E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {18320B19-B604-4F9F-B7DC-90913F9058EA}
+	EndGlobalSection
+EndGlobal
