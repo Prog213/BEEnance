@@ -11,6 +11,11 @@ namespace BEEnance.Views
 {
     public partial class SettingsPage : ContentPage
     {
+        public bool ThemeDark => Application.Current.UserAppTheme == OSAppTheme.Dark;
+
+        public bool ThemeLight => Application.Current.UserAppTheme == OSAppTheme.Light;
+
+        public bool ThemeSystem => Application.Current.UserAppTheme == OSAppTheme.Unspecified;
         public SettingsPage()
         {
             InitializeComponent();

@@ -39,9 +39,10 @@ namespace BEEnance.Views
             }
         }
 
-        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new LoginPage());
+            await Task.Delay(100);
+            await Navigation.PushAsync(new LoginPage());
         }
     }
 }

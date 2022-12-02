@@ -48,7 +48,7 @@
     <TabBar>
         <ShellContent Title="Аналітика" Icon="img1.png" Route="AnalPage" ContentTemplate="{DataTemplate local:AnalPage}" />
         <ShellContent Title="Платежі" Icon="transfer.png" ContentTemplate="{DataTemplate local:AnalPage}" />
-        <ShellContent Title="+ / -" Icon="honey.png" ContentTemplate="{DataTemplate local:AnalPage}" />
+        <ShellContent Title="+ / -" Icon="honey.png" ContentTemplate="{DataTemplate local:AddTranPage}" />
         <ShellContent Title="Нотатки" Icon="writing.png" ContentTemplate="{DataTemplate local:AnalPage}" />
         <ShellContent Title="Профіль" Icon="user.png" ContentTemplate="{DataTemplate local:AnalPage}" />
     </TabBar>

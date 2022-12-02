@@ -1,5 +1,4 @@
-﻿using BEEnance.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,12 +9,11 @@ using Xamarin.Forms.Xaml;
 namespace BEEnance.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoginPage : ContentPage
+    public partial class AddTranPage : ContentPage
     {
-        public LoginPage()
+        public AddTranPage()
         {
             InitializeComponent();
-            this.BindingContext = new LoginViewModel();
         }
     }
 }

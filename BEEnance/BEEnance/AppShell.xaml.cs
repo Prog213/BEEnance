@@ -14,6 +14,7 @@ namespace BEEnance
             Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
             Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
             Routing.RegisterRoute("SettingsPage", typeof(SettingsPage));
+            Routing.RegisterRoute(nameof(AddTranPage), typeof(AddTranPage));
         }
 
     }

@@ -14,7 +14,7 @@
                 </Frame>
             </StackLayout>
             <StackLayout Padding="0" Margin="10,100,10,0" HorizontalOptions="FillAndExpand">
-                <Frame  BackgroundColor="White" HasShadow="True" Padding="0" Margin="0">
+                <Frame  BackgroundColor="White" HeightRequest="500" HasShadow="True" Padding="0" Margin="0">
 
                     <StackLayout>
 
@@ -31,7 +31,7 @@
                                         <Image Source="https://www.findool.com/images/avatars/avatar.png" Aspect="AspectFill" Margin="0"/>
                                     </Frame>
 
-                                    <Entry Placeholder="Username" x:Name="txtUsername" PlaceholderColor="Gray" TextColor="black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                    <Entry Placeholder="Email" PlaceholderColor="Gray" TextColor="black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
                                 </StackLayout>
                             </Frame>
 
@@ -41,7 +41,7 @@
                                         <Image Source="https://images.all-free-download.com/images/graphicthumb/lock_icon_6813906.jpg" Aspect="AspectFill" Margin="0"/>
                                     </Frame>
 
-                                    <Entry Placeholder="Password" x:Name="txtPassword" PlaceholderColor="Gray" IsPassword="True" TextColor="black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                    <Entry Placeholder="Password" PlaceholderColor="Gray" IsPassword="True" TextColor="black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
                                 </StackLayout>
                             </Frame>
 
@@ -54,9 +54,9 @@
 
                             </StackLayout>
 
-                            <Button Text="SIGN IN" BackgroundColor="#FFD800" TextColor="Black" CornerRadius="30" Clicked="Button_Clicked" />
+                            <Button Text="SIGN IN" BackgroundColor="#FFD800" TextColor="Black" CornerRadius="30" />
                             <RelativeLayout  HorizontalOptions="Center">
-                                <Button Text="Still Not Connected?" Clicked="TapGestureRecognizer_Tapped" TextColor="DarkGray" FontSize="Micro" BackgroundColor="White"
+                                <Button Text="Still Not Connected?" TextColor="DarkGray" FontSize="Micro" BackgroundColor="White"
                                         CornerRadius="30"  HeightRequest="35" HorizontalOptions="End" Margin="5"/>
                             </RelativeLayout>
 
