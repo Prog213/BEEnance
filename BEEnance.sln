@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BEEnance.Android", "BEEnance\BEEnance.Android\BEEnance.Android.csproj", "{E7E6CEC4-6118-4035-BF6C-5F66203D5016}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BEEnance", "BEEnance\BEEnance\BEEnance.csproj", "{ED14BBC4-C1E7-4D0A-8E04-61686843509E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BEEnance", "BEEnance\BEEnance\BEEnance.csproj", "{ED14BBC4-C1E7-4D0A-8E04-61686843509E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

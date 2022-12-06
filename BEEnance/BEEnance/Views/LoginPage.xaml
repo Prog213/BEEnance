@@ -14,13 +14,13 @@
                 </Frame>
             </StackLayout>
             <StackLayout Padding="0" Margin="10,100,10,0" HorizontalOptions="FillAndExpand">
-                <Frame  BackgroundColor="White" HeightRequest="500" HasShadow="True" Padding="0" Margin="0">
+                <Frame  BackgroundColor="White" HasShadow="True" Padding="0" Margin="0">
 
                     <StackLayout>
 
 
                         <StackLayout Margin="10">
-                            <Label Text="SIGN IN" TextColor="Black" HorizontalOptions="CenterAndExpand" FontSize="Large"/>
+                            <Label Text="ВХІД" TextColor="Black" HorizontalOptions="CenterAndExpand" FontSize="Large"/>
                         </StackLayout>
 
                         <StackLayout Padding="0" Margin="15,10">
@@ -31,7 +31,7 @@
                                         <Image Source="https://www.findool.com/images/avatars/avatar.png" Aspect="AspectFill" Margin="0"/>
                                     </Frame>
 
-                                    <Entry Placeholder="Email" PlaceholderColor="Gray" TextColor="black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                    <Entry Placeholder="Ім'я користувача" x:Name="txtUsername" PlaceholderColor="Gray" TextColor="black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
                                 </StackLayout>
                             </Frame>
 
@@ -41,22 +41,13 @@
                                         <Image Source="https://images.all-free-download.com/images/graphicthumb/lock_icon_6813906.jpg" Aspect="AspectFill" Margin="0"/>
                                     </Frame>
 
-                                    <Entry Placeholder="Password" PlaceholderColor="Gray" IsPassword="True" TextColor="black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                    <Entry Placeholder="Пароль" x:Name="txtPassword" PlaceholderColor="Gray" IsPassword="True" TextColor="black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
                                 </StackLayout>
                             </Frame>
 
-                            <StackLayout  Orientation="Horizontal">
-                                <CheckBox IsChecked="False" Color="Black" />
-                                <Label Text="Remember me" TextColor="DarkGray" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
-
-                                <Button Text="Forgot Password?" TextColor="Black" FontAttributes="Bold" HorizontalOptions="EndAndExpand"
-                                        FontSize="Small" BackgroundColor="White" CornerRadius="30" HeightRequest="40" />
-
-                            </StackLayout>
-
-                            <Button Text="SIGN IN" BackgroundColor="#FFD800" TextColor="Black" CornerRadius="30" />
+                            <Button Text="УВІЙТИ" BackgroundColor="#FFD800" TextColor="Black" CornerRadius="30" Clicked="Button_Clicked" />
                             <RelativeLayout  HorizontalOptions="Center">
-                                <Button Text="Still Not Connected?" TextColor="DarkGray" FontSize="Micro" BackgroundColor="White"
+                                <Button Text="Ще не зареєстровані?" Clicked="TapGestureRecognizer_Tapped" TextColor="DarkGray" FontSize="Small" BackgroundColor="White"
                                         CornerRadius="30"  HeightRequest="35" HorizontalOptions="End" Margin="5"/>
                             </RelativeLayout>
 
@@ -64,15 +55,12 @@
                                 <Grid>
                                     <BoxView BackgroundColor="DarkGray" HeightRequest="1" WidthRequest="150"  HorizontalOptions="Center" VerticalOptions="Center"/>
                                     <Frame BackgroundColor="White" HeightRequest="45" WidthRequest="45" CornerRadius="45" HasShadow="False" BorderColor="DarkGray" Margin="0" HorizontalOptions="Center" Padding="0">
-                                        <Label Text="OR" TextColor="DarkGray" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                                        <Label Text="АБО" TextColor="DarkGray" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
                                     </Frame>
                                 </Grid>
                             </StackLayout>
 
                             <StackLayout Margin="0,25" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-                                <Frame BackgroundColor="White" HeightRequest="55" WidthRequest="45" CornerRadius="55" HasShadow="False" BorderColor="DarkGray" Margin="0" HorizontalOptions="Center" Padding="0">
-                                    <ImageButton Source="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Facebook_logo_%28square%29.png/600px-Facebook_logo_%28square%29.png" Aspect="AspectFill" Margin="0"/>
-                                </Frame>
                                 <Frame BackgroundColor="White" HeightRequest="55" WidthRequest="45" CornerRadius="55" HasShadow="False" BorderColor="DarkGray" Margin="0" HorizontalOptions="Center" Padding="0">
                                     <ImageButton Source="https://blog.hubspot.com/hubfs/image8-2.jpg" Aspect="AspectFill" Margin="0"/>
                                 </Frame>

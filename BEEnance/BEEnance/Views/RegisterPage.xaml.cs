@@ -33,16 +33,24 @@ namespace BEEnance.Views
                 };
                 var newPostJson = JsonConvert.SerializeObject(signupPost);
                 var payload = new StringContent(newPostJson, Encoding.UTF8, "application/json");
-                var result = сlient.PostAsync(endpoint, payload).Result.Content.ReadAsStringAsync().Result;
+                var result = сlient.PostAsync(endpoint, payload).Result;
 
-                await DisplayAlert("Отакі-от справи", result, "Ok"); // оця фігня тільки для дебагу треба
+                if (result.IsSuccessStatusCode == true)
+                {
+                    await DisplayAlert("Успіх!", "Ви успішно авторизувались.", "Ок");
+                    await Navigation.PushAsync(new AppShell());
+                    //await Navigation.PushModalAsync(new AnalPage());
+                }
+                else
+                {
+                    await DisplayAlert("Отакі-от справи", result.Content.ReadAsStringAsync().Result, "Ок");
+                }
             }
         }
 
-        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            await Task.Delay(100);
-            await Navigation.PushAsync(new LoginPage());
+            Navigation.PushAsync(new LoginPage());
         }
     }
 }

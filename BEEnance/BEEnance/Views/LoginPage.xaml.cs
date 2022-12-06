@@ -1,7 +1,9 @@
 ﻿using BEEnance.ViewModels;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -16,6 +18,43 @@ namespace BEEnance.Views
         {
             InitializeComponent();
             this.BindingContext = new LoginViewModel();
+            Routing.RegisterRoute(nameof(RegisterPage), typeof(RegisterPage));
+        }
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            // SIGNIN ТУТ
+            using (var сlient = new HttpClient())
+            {
+                var endpoint = new Uri("https://trutenfinance-expenses-api.azurewebsites.net/Authentication/signin");
+                var signupPost = new APIs.User()
+                {
+                    id = 0, // айді користувача вимагається в API-запиті, але фактично він не перевіряється
+                    username = txtUsername.Text,
+                    password = txtPassword.Text,
+                    email = "", // для входу потрібні тільки ім'я і пароль, тому відправляємо пустий рядок
+                                // сам email не юзається фактично, але він потрібен в API-запиті, тому не видаляй
+                };
+                var newPostJson = JsonConvert.SerializeObject(signupPost);
+                var payload = new StringContent(newPostJson, Encoding.UTF8, "application/json");
+                //var result = сlient.PostAsync(endpoint, payload).Result.Content.ReadAsStringAsync().Result;
+                var result = сlient.PostAsync(endpoint, payload).Result;
+
+                if (result.IsSuccessStatusCode == true)
+                {
+                    await DisplayAlert("Успіх!", "Ви успішно авторизувались.", "Ок");
+                    await Navigation.PushAsync(new AppShell());
+                    await Navigation.PushModalAsync(new AnalPage());
+                }
+                else
+                {
+                    await DisplayAlert("Отакі-от справи", result.Content.ReadAsStringAsync().Result, "Ок");
+                }
+            }
+        }
+
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new RegisterPage());
         }
     }
 }
