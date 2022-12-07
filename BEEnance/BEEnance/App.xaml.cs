@@ -16,8 +16,7 @@ namespace BEEnance
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            //MainPage = new LoginPage();
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(new LoginPage());
         }
 
         protected override void OnStart()

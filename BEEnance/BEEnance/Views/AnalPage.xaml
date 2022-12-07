@@ -8,7 +8,7 @@
     BackgroundColor="{AppThemeBinding
                     Dark={StaticResource WindowBackgroundColorDark}, 
                     Light={StaticResource WindowBackgroundColor}}">
-    
+
     <ContentPage.BindingContext>
         <vm:AnalViewModel />
     </ContentPage.BindingContext>
