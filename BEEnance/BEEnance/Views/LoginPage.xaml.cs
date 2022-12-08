@@ -26,8 +26,8 @@ namespace BEEnance.Views
                 var endpoint = new Uri("https://trutenfinance-expenses-api.azurewebsites.net/Authentication/signin");
                 var signupPost = new Models.User()
                 {
-                    username = txtUsername.Text,
-                    password = txtPassword.Text,
+                    Username = txtUsername.Text,
+                    Password = txtPassword.Text,
                 };
                 var newPostJson = JsonConvert.SerializeObject(signupPost);
                 var payload = new StringContent(newPostJson, Encoding.UTF8, "application/json");
