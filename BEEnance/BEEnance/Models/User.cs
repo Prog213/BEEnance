@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace BEEnance.APIs
+﻿namespace BEEnance.Models
 {
     internal class User
     {

@@ -24,7 +24,7 @@ namespace BEEnance.Views
             using (var сlient = new HttpClient())
             {
                 var endpoint = new Uri("https://trutenfinance-expenses-api.azurewebsites.net/Authentication/signin");
-                var signupPost = new APIs.User()
+                var signupPost = new Models.User()
                 {
                     username = txtUsername.Text,
                     password = txtPassword.Text,
