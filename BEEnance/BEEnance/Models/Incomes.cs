@@ -1,11 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using SQLite;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BEEnance.Models
 {
-    internal class Incomes
+    public class Incomes
     {
-        [Key]
+        [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
         public double Amount { get; set; }
         public string Date { get; set; }
