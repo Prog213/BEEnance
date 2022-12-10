@@ -43,7 +43,6 @@ namespace BEEnance.Views
                 {
                     await DisplayAlert("Успіх!", "Ви успішно авторизувались.", "Ок");
                     await Navigation.PopAsync(false);
-                    await Task.Delay(100);
                     Application.Current.MainPage = new AppShell();
                 }
                 else

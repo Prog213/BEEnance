@@ -1,18 +1,160 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:fastEntry="clr-namespace:XamarinFastEntrySample.FastEntry;assembly=XamarinFastEntry.Behaviors"
              x:Class="BEEnance.Views.AddTranPage"
              Title="Додати транзакцію"
-             xmlns:vm="clr-namespace:BEEnance.ViewModels"
              BackgroundColor="{AppThemeBinding 
                         Dark={StaticResource WindowBackgroundColorDark}, 
                         Light={StaticResource WindowBackgroundColor}}">
-    <ContentPage.BindingContext>
-        <vm:AnalViewModel />
-    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="buttonsave">black</Color>
+            <Color x:Key="buttonsavedark">#FFFF74</Color>
+            <Color x:Key="text">white</Color>
+            <Color x:Key="textdark">black</Color>
+            <Color x:Key="enter">white</Color>
+            <Color x:Key="enterdark">#3A3B3C</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
-    <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="setting.png" Command="{Binding Settings}"/>
-    </ContentPage.ToolbarItems>
-    
+    <Grid VerticalOptions="FillAndExpand"
+              ColumnSpacing="20"
+              HorizontalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+
+        <Frame HasShadow="false"
+                      Padding="10"
+                      BorderColor="LightGray"
+                      Margin="30,30,30,10"
+                      Grid.Row="1"
+                   CornerRadius="20"
+               BackgroundColor="{AppThemeBinding 
+                        Dark={StaticResource enterdark}, 
+                        Light={StaticResource enter}}"
+                      Grid.Column="0"
+                      Grid.ColumnSpan="3">
+            <StackLayout Orientation="Horizontal"
+                               Spacing="15">
+                <Frame BackgroundColor="#FFFF74" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="2" Margin="5">
+                    <Image Source="money.png" Aspect="AspectFill" Margin="4" HeightRequest="30"/>
+                </Frame>
+                <Entry HorizontalOptions="FillAndExpand"
+                               Keyboard="Numeric"
+                               PlaceholderColor ="#c4c4c4"
+                           Placeholder="Введіть суму"
+                           TextColor="#c4c4c4"
+                               Visual="Custom"
+                       MaxLength="10">
+                </Entry>
+            </StackLayout>
+        </Frame>
+
+        <Frame HasShadow="false"
+                      Padding="10"
+               BackgroundColor="{AppThemeBinding 
+                        Dark={StaticResource enterdark}, 
+                        Light={StaticResource enter}}"
+                      BorderColor="LightGray"
+                      Margin="30,0,0,0"
+                      Grid.Row="2"
+                      Grid.Column="0"
+                      Grid.ColumnSpan="1"
+                   CornerRadius="20">
+            <StackLayout Orientation="Horizontal"  Spacing="15">
+                <Frame BackgroundColor="#FFFF74" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="2" Margin="5">
+                    <Image Source="calendar.png" Aspect="AspectFill" Margin="6" HeightRequest="30"/>
+                </Frame>
+                <Entry HorizontalOptions="FillAndExpand"
+                               Keyboard="Numeric"
+                           Placeholder="Введіть дату"
+                               PlaceholderColor ="#c4c4c4"
+                           TextColor="#c4c4c4"
+                               Visual="Custom">
+                    <Entry.Behaviors>
+                        <fastEntry:XamarinFastEntryBehaviour Mask="##/##" MaxLength="5"/>
+                    </Entry.Behaviors>
+                </Entry>
+            </StackLayout>
+        </Frame>
+
+        <Frame HasShadow="false"
+                      Padding="10"
+                      BorderColor="LightGray"
+                      Margin="30,10,30,10"
+               BackgroundColor="{AppThemeBinding 
+                        Dark={StaticResource enterdark}, 
+                        Light={StaticResource enter}}"
+                      Grid.Row="3"
+                   CornerRadius="20"
+                      Grid.Column="0"
+                      Grid.ColumnSpan="3">
+            <StackLayout Orientation="Horizontal"  Spacing="15">
+                <Frame BackgroundColor="#FFFF74" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="2" Margin="5">
+                    <Image Source="note.png" Aspect="AspectFill" Margin="4" HeightRequest="30"/>
+                </Frame>
+                <Entry HorizontalOptions="FillAndExpand"
+                              Keyboard="Text"
+                              Placeholder="Примітка (не обов'язково)"
+                           MaxLength="20"
+                           PlaceholderColor ="#c4c4c4"
+                           TextColor="#c4c4c4"
+                              Visual="Custom">
+                </Entry>
+            </StackLayout>
+        </Frame>
+
+        <Button Text="Вибір категорії"
+                         Grid.Row="4"
+                         Grid.Column="0"
+                         Grid.ColumnSpan="3"
+                         BackgroundColor="DimGray"
+                         BorderColor="LightGray"
+                         TextColor="White"
+                         BorderWidth="2"
+                         FontSize="18"
+                         CornerRadius="25"
+                         Padding="18"
+                         Margin="30,7"/>
+
+        <BoxView HorizontalOptions="FillAndExpand"
+                         Color="#B5BBC2"
+                         Visual="Default"
+                         HeightRequest="1"
+                         Margin="0,30"
+                         Grid.Row="5"
+                         Grid.Column="0"
+                         Grid.ColumnSpan="3"/>
+
+        <Button Text="Зберегти"
+                         BackgroundColor="{AppThemeBinding 
+                        Dark={StaticResource buttonsavedark}, 
+                        Light={StaticResource buttonsave}}"
+                         CornerRadius="26"
+                         BorderColor="Black"
+                         FontSize="18"
+                         Grid.Row="6"
+                         Grid.Column="0"
+                         Grid.ColumnSpan="3"
+                         Padding="18"
+                         TextColor="{AppThemeBinding
+                        Dark={StaticResource textdark}, 
+                        Light={StaticResource text}}"
+                         BorderWidth="2"
+                         Margin="30,0,30,30"/>
+    </Grid>
 </ContentPage>

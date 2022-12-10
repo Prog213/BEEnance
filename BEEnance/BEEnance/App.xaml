@@ -8,21 +8,21 @@
     <Application.Resources>
         <ResourceDictionary>
 
-                    <Color x:Key="TextColor">#000000</Color>
-                    <Color x:Key="TextColorDark">White</Color>
+            <Color x:Key="TextColor">#000000</Color>
+            <Color x:Key="TextColorDark">White</Color>
 
-                    <Color x:Key="WindowBackgroundColor">#f2f2f7</Color>
-                    <Color x:Key="WindowBackgroundColorDark">Black</Color>
+            <Color x:Key="WindowBackgroundColor">#f2f2f7</Color>
+            <Color x:Key="WindowBackgroundColorDark">Black</Color>
 
             <Color x:Key="LightRadioButtonColor">#F3F2F1</Color>
             <Color x:Key="DarkRadioButtonColor">#9B9A99</Color>
-          
+
             <Style x:Key="BaseLabel" TargetType="Label">
                 <Setter Property="TextColor" 
                         Value="{AppThemeBinding Dark={StaticResource TextColorDark},
                     Light={StaticResource TextColor}}" />
             </Style>
-            
+
             <Style x:Key="ButtonOutline" TargetType="Button">
                 <Setter Property="TextColor" Value="{AppThemeBinding Dark={StaticResource TextColorDark},
                     Light={StaticResource TextColor}}" />
@@ -36,7 +36,7 @@
                     Light={StaticResource TextColor}}" />
                 <Setter Property="HorizontalOptions" Value="Center" />
             </Style>
-            
-        </ResourceDictionary>        
+
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
