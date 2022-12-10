@@ -1,0 +1,88 @@
+C:\Users\romaz\Source\Repos\BEEnanceFork\BEEnance\BEEnance\obj\Debug\netstandard2.0\BEEnance.csproj.AssemblyReference.cache
+C:\Users\romaz\Source\Repos\BEEnanceFork\BEEnance\BEEnance\obj\Debug\netstandard2.0\BEEnance.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\romaz\Source\Repos\BEEnanceFork\BEEnance\BEEnance\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\romaz\Source\Repos\BEEnanceFork\BEEnance\BEEnance\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
+C:\Users\romaz\Source\Repos\BEEnanceFork\BEEnance\BEEnance\obj\Debug\netstandard2.0\Views\AddTranPage.xaml.g.cs
+C:\Users\romaz\Source\Repos\BEEnanceFork\BEEnance\BEEnance\obj\Debug\netstandard2.0\Views\AnalPage.xaml.g.cs
+C:\Users\romaz\Source\Repos\BEEnanceFork\BEEnance\BEEnance\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
+C:\Users\romaz\Source\Repos\BEEnanceFork\BEEnance\BEEnance\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+C:\Users\romaz\Source\Repos\BEEnanceFork\BEEnance\BEEnance\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
+C:\Users\romaz\Source\Repos\BEEnanceFork\BEEnance\BEEnance\obj\Debug\netstandard2.0\Views\RegisterPage.xaml.g.cs
+C:\Users\romaz\Source\Repos\BEEnanceFork\BEEnance\BEEnance\obj\Debug\netstandard2.0\Views\SettingsPage.xaml.g.cs
+C:\Users\romaz\Source\Repos\BEEnanceFork\BEEnance\BEEnance\obj\Debug\netstandard2.0\BEEnance.AssemblyInfoInputs.cache
+C:\Users\romaz\Source\Repos\BEEnanceFork\BEEnance\BEEnance\obj\Debug\netstandard2.0\BEEnance.AssemblyInfo.cs
+C:\Users\romaz\Source\Repos\BEEnanceFork\BEEnance\BEEnance\obj\Debug\netstandard2.0\BEEnance.csproj.CoreCompileInputs.cache
+C:\Users\romaz\Source\Repos\BEEnanceFork\BEEnance\BEEnance\bin\Debug\netstandard2.0\BEEnance.deps.json
+C:\Users\romaz\Source\Repos\BEEnanceFork\BEEnance\BEEnance\bin\Debug\netstandard2.0\BEEnance.dll
+C:\Users\romaz\Source\Repos\BEEnanceFork\BEEnance\BEEnance\bin\Debug\netstandard2.0\BEEnance.pdb
+C:\Users\romaz\Source\Repos\BEEnanceFork\BEEnance\BEEnance\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\romaz\Source\Repos\BEEnanceFork\BEEnance\BEEnance\obj\Debug\netstandard2.0\BEEnance.dll
+C:\Users\romaz\Source\Repos\BEEnanceFork\BEEnance\BEEnance\obj\Debug\netstandard2.0\refint\BEEnance.dll
+C:\Users\romaz\Source\Repos\BEEnanceFork\BEEnance\BEEnance\obj\Debug\netstandard2.0\BEEnance.pdb
+C:\Users\romaz\Source\Repos\BEEnanceFork\BEEnance\BEEnance\obj\Debug\netstandard2.0\ref\BEEnance.dll
+C:\Users\romaz\source\repos\BEEnance\BEEnance\BEEnance\bin\Debug\netstandard2.0\BEEnance.deps.json
+C:\Users\romaz\source\repos\BEEnance\BEEnance\BEEnance\bin\Debug\netstandard2.0\BEEnance.dll
+C:\Users\romaz\source\repos\BEEnance\BEEnance\BEEnance\bin\Debug\netstandard2.0\BEEnance.pdb
+C:\Users\romaz\source\repos\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\BEEnance.csproj.AssemblyReference.cache
+C:\Users\romaz\source\repos\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\BEEnance.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\romaz\source\repos\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\romaz\source\repos\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
+C:\Users\romaz\source\repos\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\Views\AddTranPage.xaml.g.cs
+C:\Users\romaz\source\repos\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\Views\AnalPage.xaml.g.cs
+C:\Users\romaz\source\repos\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+C:\Users\romaz\source\repos\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
+C:\Users\romaz\source\repos\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\Views\RegisterPage.xaml.g.cs
+C:\Users\romaz\source\repos\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\Views\SettingsPage.xaml.g.cs
+C:\Users\romaz\source\repos\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\BEEnance.AssemblyInfoInputs.cache
+C:\Users\romaz\source\repos\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\BEEnance.AssemblyInfo.cs
+C:\Users\romaz\source\repos\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\BEEnance.csproj.CoreCompileInputs.cache
+C:\Users\romaz\source\repos\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\romaz\source\repos\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\BEEnance.dll
+C:\Users\romaz\source\repos\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\refint\BEEnance.dll
+C:\Users\romaz\source\repos\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\BEEnance.pdb
+C:\Users\romaz\source\repos\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\ref\BEEnance.dll
+C:\Users\ipmon\OneDrive\Рабочий стол\BEEnance\BEEnance\BEEnance\bin\Debug\netstandard2.0\BEEnance.deps.json
+C:\Users\ipmon\OneDrive\Рабочий стол\BEEnance\BEEnance\BEEnance\bin\Debug\netstandard2.0\BEEnance.dll
+C:\Users\ipmon\OneDrive\Рабочий стол\BEEnance\BEEnance\BEEnance\bin\Debug\netstandard2.0\BEEnance.pdb
+C:\Users\ipmon\OneDrive\Рабочий стол\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\BEEnance.csproj.AssemblyReference.cache
+C:\Users\ipmon\OneDrive\Рабочий стол\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\BEEnance.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ipmon\OneDrive\Рабочий стол\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\ipmon\OneDrive\Рабочий стол\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
+C:\Users\ipmon\OneDrive\Рабочий стол\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\Views\AddTranPage.xaml.g.cs
+C:\Users\ipmon\OneDrive\Рабочий стол\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\Views\AnalPage.xaml.g.cs
+C:\Users\ipmon\OneDrive\Рабочий стол\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
+C:\Users\ipmon\OneDrive\Рабочий стол\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+C:\Users\ipmon\OneDrive\Рабочий стол\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
+C:\Users\ipmon\OneDrive\Рабочий стол\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\Views\RegisterPage.xaml.g.cs
+C:\Users\ipmon\OneDrive\Рабочий стол\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\Views\SettingsPage.xaml.g.cs
+C:\Users\ipmon\OneDrive\Рабочий стол\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\BEEnance.AssemblyInfoInputs.cache
+C:\Users\ipmon\OneDrive\Рабочий стол\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\BEEnance.AssemblyInfo.cs
+C:\Users\ipmon\OneDrive\Рабочий стол\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\BEEnance.csproj.CoreCompileInputs.cache
+C:\Users\ipmon\OneDrive\Рабочий стол\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\ipmon\OneDrive\Рабочий стол\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\BEEnance.dll
+C:\Users\ipmon\OneDrive\Рабочий стол\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\refint\BEEnance.dll
+C:\Users\ipmon\OneDrive\Рабочий стол\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\BEEnance.pdb
+C:\Users\ipmon\OneDrive\Рабочий стол\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\ref\BEEnance.dll
+D:\BEEnance\BEEnance\BEEnance\bin\Debug\netstandard2.0\BEEnance.deps.json
+D:\BEEnance\BEEnance\BEEnance\bin\Debug\netstandard2.0\BEEnance.dll
+D:\BEEnance\BEEnance\BEEnance\bin\Debug\netstandard2.0\BEEnance.pdb
+D:\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\BEEnance.csproj.AssemblyReference.cache
+D:\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\BEEnance.GeneratedMSBuildEditorConfig.editorconfig
+D:\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
+D:\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\Views\AddTranPage.xaml.g.cs
+D:\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\Views\AnalPage.xaml.g.cs
+D:\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
+D:\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+D:\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
+D:\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\Views\RegisterPage.xaml.g.cs
+D:\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\Views\SettingsPage.xaml.g.cs
+D:\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\BEEnance.AssemblyInfoInputs.cache
+D:\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\BEEnance.AssemblyInfo.cs
+D:\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\BEEnance.csproj.CoreCompileInputs.cache
+D:\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\XamlC.stamp
+D:\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\BEEnance.dll
+D:\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\refint\BEEnance.dll
+D:\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\BEEnance.pdb
+D:\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\ref\BEEnance.dll
+C:\Users\romaz\source\repos\BEEnance\BEEnance\BEEnance\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs

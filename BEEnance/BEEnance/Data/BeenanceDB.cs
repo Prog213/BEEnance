@@ -7,7 +7,7 @@ namespace BEEnance.Data
 {
     public class BeenanceDB
     {
-        readonly SQLiteAsyncConnection db;
+        private readonly SQLiteAsyncConnection db;
 
         public BeenanceDB(string connectionString) // це якийсь гівнокод
         {                                          // в ідеалі потім це все розбити на файли і взагалі переробити
@@ -16,15 +16,15 @@ namespace BEEnance.Data
 
             db.CreateTableAsync<Expenses>().Wait();
             db.CreateTableAsync<Incomes>().Wait();
-            db.CreateTableAsync<Category>().Wait();
+            //db.CreateTableAsync<Category>().Wait();
         }
 
-        public Task<List<Expenses>> GetExpenses()
+        public Task<List<Expenses>> GetExpenses() // отримати список зі всіма витратами
         {
             return db.Table<Expenses>().ToListAsync(); 
         }
 
-        public Task<Expenses> GetExpense(int id)
+        public Task<Expenses> GetExpense(int id) // отримати конкретну витрату по айді
         {
             return db.Table<Expenses>()
                 .Where(e => e.Id == id)
@@ -43,7 +43,7 @@ namespace BEEnance.Data
             }
         }
 
-        public Task<int> DeleteExpense(Expenses expense)
+        public Task<int> DeleteExpense(Expenses expense) // видалити витрату
         {
             return db.DeleteAsync(expense);
         }

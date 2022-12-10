@@ -10,8 +10,9 @@ namespace BEEnance.Models
         public double Amount { get; set; }
         public string Date { get; set; }
         public string Notes { get; set; }
+        public string Category { get; set; }
 
-        [ForeignKey("CategoryId")]
-        public Category Category { get; set; }
+        //[ForeignKey("CategoryId")]
+        //public Category Category { get; set; }
     }
 }

@@ -7,11 +7,12 @@ namespace BEEnance.Models
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
-        public double Amount { get; set; }
+        public string Amount { get; set; } // тут мав би бути double, але воно не робе
         public string Date { get; set; }
         public string Notes { get; set; }
+        public string Category { get; set; }
 
-        [ForeignKey("CategoryId")]
-        public Category Category { get; set; }
+        //[ForeignKey("CategoryId")]
+        //public Category Category { get; set; }
     }
 }

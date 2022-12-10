@@ -12,9 +12,9 @@ namespace BEEnance
 {
     public partial class App : Application
     {
-        static BeenanceDB beenanceDB;
+        private static BeenanceDB beenanceDB;
 
-        public static BeenanceDB BeenanceDB
+        public static BeenanceDB BeenanceDB // створюємо файл з БД, якщо він його ще не було
         {
             get
             {
@@ -22,7 +22,7 @@ namespace BEEnance
                 {
                     beenanceDB = new BeenanceDB(
                         Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
-                        "BEEnanceDB.db3"));
+                        "BeenanceDB.db3"));
                 }
                 return beenanceDB;
             }

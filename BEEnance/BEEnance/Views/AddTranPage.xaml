@@ -53,7 +53,8 @@
                 <Frame BackgroundColor="#FFFF74" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="2" Margin="5">
                     <Image Source="money.png" Aspect="AspectFill" Margin="4" HeightRequest="30"/>
                 </Frame>
-                <Entry HorizontalOptions="FillAndExpand"
+                <Entry HorizontalOptions="FillAndExpand" 
+                            x:Name="txtValue"
                                Keyboard="Numeric"
                                PlaceholderColor ="#c4c4c4"
                            Placeholder="Введіть суму"
@@ -80,6 +81,7 @@
                     <Image Source="calendar.png" Aspect="AspectFill" Margin="6" HeightRequest="30"/>
                 </Frame>
                 <Entry HorizontalOptions="FillAndExpand"
+                             x:Name="txtDate"
                                Keyboard="Numeric"
                            Placeholder="Введіть дату"
                                PlaceholderColor ="#c4c4c4"
@@ -108,6 +110,7 @@
                     <Image Source="note.png" Aspect="AspectFill" Margin="4" HeightRequest="30"/>
                 </Frame>
                 <Entry HorizontalOptions="FillAndExpand"
+                            x:Name="txtNote"
                               Keyboard="Text"
                               Placeholder="Примітка (не обов'язково)"
                            MaxLength="20"
@@ -144,6 +147,7 @@
                          BackgroundColor="{AppThemeBinding 
                         Dark={StaticResource buttonsavedark}, 
                         Light={StaticResource buttonsave}}"
+                        Clicked="OnButtonClicked"
                          CornerRadius="26"
                          BorderColor="Black"
                          FontSize="18"

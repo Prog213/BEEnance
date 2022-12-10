@@ -15,5 +15,23 @@ namespace BEEnance.Views
         {
             InitializeComponent();
         }
+        async void OnButtonClicked(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(txtValue.Text))
+            {
+                //double dValue = Convert.ToDouble(txtValue.Text);
+                await App.BeenanceDB.SaveExpense(new Models.Expenses
+                {
+                    Amount = txtValue.Text,
+                    Date = txtDate.Text,
+                    Notes = txtNote.Text,
+                    //Category = 
+                });
+                
+                txtValue.Text = string.Empty; // чистимо всі рядки від старого тексту
+                txtDate.Text = string.Empty;
+                txtNote.Text = string.Empty;
+            }
+        }
     }
 }

@@ -33,6 +33,9 @@
     <Compile Update="Views\AddTranPage.xaml.cs">
       <DependentUpon>AddTranPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\ItemDetailPage.xaml.cs">
+      <DependentUpon>ItemDetailPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
