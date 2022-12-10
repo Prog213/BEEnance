@@ -1,8 +1,5 @@
-﻿using BEEnance.ViewModels;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,12 +21,12 @@ namespace BEEnance.Views
             using (var сlient = new HttpClient())
             {
                 var endpoint = new Uri("https://trutenfinance-expenses-api.azurewebsites.net/Authentication/signup");
-                var signupPost = new APIs.User()
+                var signupPost = new Models.User()
                 {
-                    id = 0, // айді буде автоматично просвоєне базою даних, тому відправляємо 0 і не паримось
-                    username = txtUsername.Text,
-                    password = txtPassword.Text,
-                    email = txtEmail.Text,
+                    Id = 0, // айді буде автоматично просвоєне базою даних, тому відправляємо 0 і не паримось
+                    Username = txtUsername.Text,
+                    Password = txtPassword.Text,
+                    Email = txtEmail.Text,
                 };
                 var newPostJson = JsonConvert.SerializeObject(signupPost);
                 var payload = new StringContent(newPostJson, Encoding.UTF8, "application/json");

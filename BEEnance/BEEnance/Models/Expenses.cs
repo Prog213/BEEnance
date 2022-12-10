@@ -1,0 +1,17 @@
+﻿using SQLite;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace BEEnance.Models
+{
+    public class Expenses
+    {
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
+        public double Amount { get; set; }
+        public string Date { get; set; }
+        public string Notes { get; set; }
+
+        [ForeignKey("CategoryId")]
+        public Category Category { get; set; }
+    }
+}

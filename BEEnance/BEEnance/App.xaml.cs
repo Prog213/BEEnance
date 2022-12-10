@@ -1,7 +1,9 @@
-﻿using BEEnance.Helpers;
+﻿using BEEnance.Data;
+using BEEnance.Helpers;
 using BEEnance.Services;
 using BEEnance.Views;
 using System;
+using System.IO;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -10,6 +12,21 @@ namespace BEEnance
 {
     public partial class App : Application
     {
+        static BeenanceDB beenanceDB;
+
+        public static BeenanceDB BeenanceDB
+        {
+            get
+            {
+                if (beenanceDB == null)
+                {
+                    beenanceDB = new BeenanceDB(
+                        Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+                        "BEEnanceDB.db3"));
+                }
+                return beenanceDB;
+            }
+        }
 
         public App()
         {
