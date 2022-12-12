@@ -24,7 +24,7 @@ namespace BEEnance.Views
             using (var сlient = new HttpClient())
             {
                 var endpoint = new Uri("https://trutenfinance-expenses-api.azurewebsites.net/Authentication/signup");
-                var signupPost = new APIs.User()
+                var signupPost = new Models.User()
                 {
                     id = 0, // айді буде автоматично просвоєне базою даних, тому відправляємо 0 і не паримось
                     username = txtUsername.Text,
@@ -33,16 +33,28 @@ namespace BEEnance.Views
                 };
                 var newPostJson = JsonConvert.SerializeObject(signupPost);
                 var payload = new StringContent(newPostJson, Encoding.UTF8, "application/json");
-                var result = сlient.PostAsync(endpoint, payload).Result.Content.ReadAsStringAsync().Result;
+                var result = сlient.PostAsync(endpoint, payload).Result;
 
-                await DisplayAlert("Отакі-от справи", result, "Ok"); // оця фігня тільки для дебагу треба
+                if (result.IsSuccessStatusCode == true)
+                {
+                    await DisplayAlert("Успіх!", "Ви успішно авторизувались.", "Ок");
+                    await Navigation.PopAsync(false);
+                    await Task.Delay(100);
+                    Application.Current.MainPage = new AppShell();
+                }
+                else
+                {
+                    await DisplayAlert("Отакі-от справи", result.Content.ReadAsStringAsync().Result, "Ок");
+                }
             }
         }
 
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
+            await Navigation.PopAsync(false);
             await Task.Delay(100);
-            await Navigation.PushAsync(new LoginPage());
+            await Navigation.PushAsync(new LoginPage(), false);
+
         }
     }
 }

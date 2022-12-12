@@ -11,11 +11,13 @@ namespace BEEnance
         public AppShell()
         {
             InitializeComponent();
-            Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
-            Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
             Routing.RegisterRoute("SettingsPage", typeof(SettingsPage));
-            Routing.RegisterRoute(nameof(AddTranPage), typeof(AddTranPage));
+            Routing.RegisterRoute(nameof(MonoPage), typeof(MonoPage));
+            Routing.RegisterRoute(nameof(ProfilePage), typeof(ProfilePage));
+            Routing.RegisterRoute(nameof(APIPage), typeof(APIPage));
+            Routing.RegisterRoute(nameof(AddExpPage), typeof(AddExpPage));
+            Routing.RegisterRoute(nameof(AddIncomePage), typeof(AddIncomePage));
+            Routing.RegisterRoute(nameof(AnalPage), typeof(AnalPage));
         }
-
     }
 }
