@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Acr.UserDialogs;
 
 namespace BEEnance.Views
 {
@@ -22,32 +23,36 @@ namespace BEEnance.Views
         }
         private async void Button_Clicked(object sender, EventArgs e)
         {
+            UserDialogs.Instance.ShowLoading("Будь ласка, зачекайте...");
+            await Task.Delay(1000);
+
             // SIGNIN ТУТ
             using (var сlient = new HttpClient())
             {
                 var endpoint = new Uri("https://trutenfinance-expenses-api.azurewebsites.net/Authentication/signin");
-                var signupPost = new APIs.User()
+                var signupPost = new Models.User()
                 {
                     id = 0, // айді користувача вимагається в API-запиті, але фактично він не перевіряється
                     username = txtUsername.Text,
-                    password = txtPassword.Text,
-                    email = "", // для входу потрібні тільки ім'я і пароль, тому відправляємо пустий рядок
-                                // сам email не юзається фактично, але він потрібен в API-запиті, тому не видаляй
+                    password = txtPassword.Text
                 };
                 var newPostJson = JsonConvert.SerializeObject(signupPost);
                 var payload = new StringContent(newPostJson, Encoding.UTF8, "application/json");
-                //var result = сlient.PostAsync(endpoint, payload).Result.Content.ReadAsStringAsync().Result;
                 var result = сlient.PostAsync(endpoint, payload).Result;
 
                 if (result.IsSuccessStatusCode == true)
                 {
+                    UserDialogs.Instance.HideLoading();
                     await DisplayAlert("Успіх!", "Ви успішно авторизувались.", "Ок");
                     await Navigation.PopAsync(false);
-                    await Task.Delay(100);
+                    UserDialogs.Instance.ShowLoading("Будь ласка, зачекайте...");
+                    await Task.Delay(1000);
                     Application.Current.MainPage = new AppShell();
+                    UserDialogs.Instance.HideLoading();
                 }
                 else
                 {
+                    UserDialogs.Instance.HideLoading();
                     await DisplayAlert("Отакі-от справи", result.Content.ReadAsStringAsync().Result, "Ок");
                 }
             }

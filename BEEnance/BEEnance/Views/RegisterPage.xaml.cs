@@ -24,7 +24,7 @@ namespace BEEnance.Views
             using (var сlient = new HttpClient())
             {
                 var endpoint = new Uri("https://trutenfinance-expenses-api.azurewebsites.net/Authentication/signup");
-                var signupPost = new APIs.User()
+                var signupPost = new Models.User()
                 {
                     id = 0, // айді буде автоматично просвоєне базою даних, тому відправляємо 0 і не паримось
                     username = txtUsername.Text,

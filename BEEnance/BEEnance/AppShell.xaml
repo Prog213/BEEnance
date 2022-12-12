@@ -5,7 +5,7 @@
        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
        xmlns:local="clr-namespace:BEEnance.Views"
-       Title="BEEnance"
+       Title="BEEFinance"
        x:Class="BEEnance.AppShell"
            BackgroundColor="{AppThemeBinding 
                     Dark={StaticResource WindowBackgroundColorDark}, 
@@ -24,7 +24,7 @@
             <Color x:Key="tabbarbackgrounddark">black</Color>
             <Color x:Key="texttabbardark">#FFFF74</Color>
             <Color x:Key="texttabbar">black</Color>
-            
+
             <Style x:Key="BaseStyle" TargetType="Element">
                 <Setter Property="Shell.BackgroundColor" Value="White" />
                 <Setter Property="Shell.TabBarBackgroundColor" Value="{AppThemeBinding 
@@ -47,10 +47,10 @@
 
     <TabBar>
         <ShellContent Title="Аналітика" Icon="img1.png" Route="AnalPage" ContentTemplate="{DataTemplate local:AnalPage}" />
-        <ShellContent Title="Платежі" Icon="transfer.png" ContentTemplate="{DataTemplate local:AnalPage}" />
-        <ShellContent Title="+ / -" Icon="honey.png" ContentTemplate="{DataTemplate local:AddTranPage}" />
+        <ShellContent Title="Платежі" Icon="transfer.png" ContentTemplate="{DataTemplate local:ItemDetailPage}" />
+        <ShellContent Title="+ / -" Icon="honey.png" ContentTemplate="{DataTemplate local:AddExpPage}" />
         <ShellContent Title="Нотатки" Icon="writing.png" ContentTemplate="{DataTemplate local:AnalPage}" />
-        <ShellContent Title="Профіль" Icon="user.png" ContentTemplate="{DataTemplate local:AnalPage}" />
+        <ShellContent Title="Профіль" Icon="user.png" ContentTemplate="{DataTemplate local:ProfilePage}" />
     </TabBar>
 
     <!--
