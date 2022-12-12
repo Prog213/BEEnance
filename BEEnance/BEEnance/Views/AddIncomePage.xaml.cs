@@ -25,7 +25,7 @@ namespace BEEnance.Views
                     Amount = txtValue.Text,
                     Date = txtDate.Text,
                     Notes = txtNote.Text,
-                    Category = genrePicker.ToString(),
+                    Category = genrePicker.Content.ToString()
                 });
 
                 txtValue.Text = string.Empty; // чистимо всі рядки від старого тексту

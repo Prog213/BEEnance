@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using BEEnance.ViewModels;
+using static BEEnance.ViewModels.AddExpViewModel;
+using BEEnance.Models;
 
 namespace BEEnance.Views
 {
@@ -21,12 +24,12 @@ namespace BEEnance.Views
             if (!string.IsNullOrWhiteSpace(txtValue.Text))
             {
                 //double dValue = Convert.ToDouble(txtValue.Text);
-                await App.BeenanceDB.SaveExpense(new Models.Expenses
+                await App.BeenanceDB.SaveExpense(new Expenses
                 {
                     Amount = txtValue.Text,
                     Date = txtDate.Text,
                     Notes = txtNote.Text,
-                    Category = genrePicker.ToString(),
+                    Category = genrePicker.Content.ToString()
                 });
 
                 txtValue.Text = string.Empty; // чистимо всі рядки від старого тексту

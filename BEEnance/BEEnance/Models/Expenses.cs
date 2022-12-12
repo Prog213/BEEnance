@@ -10,6 +10,7 @@ namespace BEEnance.Models
         public string Date { get; set; }
         public string Notes { get; set; }
         public string Category { get; set; }
+        public string Type = "Expense";
 
         //[ForeignKey("CategoryId")]
         //public Category Category { get; set; }
