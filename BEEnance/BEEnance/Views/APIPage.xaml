@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BEEnance.Views.APIPage"
+             BackgroundColor="{AppThemeBinding 
+                        Dark={StaticResource WindowBackgroundColorDark}, 
+                        Light={StaticResource WindowBackgroundColor}}">
+    <StackLayout>
+        <StackLayout Orientation="Horizontal" Margin="0,10,0,0">
+        <Frame BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30" Margin="10">
+            <Entry Placeholder="API токен" x:Name="API" PlaceholderColor="Gray" TextColor="black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0" />
+        </Frame>
+        <Button Text="ОК" BackgroundColor="#FFD800" TextColor="Black" Clicked="TapGestureRecognizer_Tapped" CornerRadius="30" Margin="10"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

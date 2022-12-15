@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:fastEntry="clr-namespace:XamarinFastEntrySample.FastEntry;assembly=XamarinFastEntry.Behaviors"
+             x:Class="BEEnance.Views.AddIncomePage"
+             xmlns:local="clr-namespace:BEEnance.ViewModels"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input" 
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             Title="Додати дохід"
+             BackgroundColor="{AppThemeBinding 
+                        Dark={StaticResource WindowBackgroundColorDark}, 
+                        Light={StaticResource WindowBackgroundColor}}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="buttonsave">black</Color>
+            <Color x:Key="buttonsavedark">#FFFF74</Color>
+            <Color x:Key="text">white</Color>
+            <Color x:Key="textdark">black</Color>
+            <Color x:Key="enter">white</Color>
+            <Color x:Key="enterdark">#3A3B3C</Color>
+
+            <Style TargetType="Label" x:Key="placeholderLabelStyle">
+                <Setter Property="TextColor" Value="#c4c4c4"/>
+                <Setter Property="Visual" Value="Custom"/>
+            </Style>
+            <Style TargetType="Label" x:Key="displayLabelStyle">
+                <Setter Property="TextColor" Value="#c4c4c4"/>
+            </Style>
+            <Style TargetType="Label" x:Key="HeaderLabelStyle">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="21"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+            <Style TargetType="telerikInput:PickerPopupHeaderView" x:Key="HeaderStyle">
+                <Setter Property="BackgroundColor" Value="#c4c4c4"/>
+                <Setter Property="HeightRequest" Value="64"/>
+            </Style>
+            <Style TargetType="telerikPrimitives:RadBorder" x:Key="SelectionHighlightStyle">
+                <Setter Property="BorderColor" Value="#c4c4c4"/>
+                <Setter Property="CornerRadius" Value="2"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.BindingContext>
+        <local:AddIncomeViewModel/>
+    </ContentPage.BindingContext>
+
+    <Grid VerticalOptions="FillAndExpand"
+              ColumnSpacing="20"
+              HorizontalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+
+        <Frame HasShadow="false"
+                      Padding="10"
+                      BorderColor="LightGray"
+                      Margin="30,30,30,10"
+                      Grid.Row="1"
+                   CornerRadius="20"
+               BackgroundColor="{AppThemeBinding 
+                        Dark={StaticResource enterdark}, 
+                        Light={StaticResource enter}}"
+                      Grid.Column="0"
+                      Grid.ColumnSpan="3">
+            <StackLayout Orientation="Horizontal"
+                               Spacing="15">
+                <Frame BackgroundColor="#FFFF74" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="2" Margin="5">
+                    <Image Source="money.png" Aspect="AspectFill" Margin="4" HeightRequest="30"/>
+                </Frame>
+                <Entry HorizontalOptions="FillAndExpand"
+                       x:Name="txtValue"
+                               Keyboard="Numeric"
+                               PlaceholderColor ="#c4c4c4"
+                           Placeholder="Введіть суму"
+                           TextColor="#c4c4c4"
+                               Visual="Custom"
+                       MaxLength="10">
+                </Entry>
+            </StackLayout>
+        </Frame>
+
+        <Frame HasShadow="false"
+                      Padding="10"
+               BackgroundColor="{AppThemeBinding 
+                        Dark={StaticResource enterdark}, 
+                        Light={StaticResource enter}}"
+                      BorderColor="LightGray"
+                      Margin="30,0,0,0"
+                      Grid.Row="2"
+                      Grid.Column="0"
+                      Grid.ColumnSpan="1"
+                   CornerRadius="20">
+            <StackLayout Orientation="Horizontal"  Spacing="15">
+                <Frame BackgroundColor="#FFFF74" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="2" Margin="5">
+                    <Image Source="calendar.png" Aspect="AspectFill" Margin="6" HeightRequest="30"/>
+                </Frame>
+                <Entry HorizontalOptions="FillAndExpand"
+                       x:Name="txtDate"
+                               Keyboard="Numeric"
+                           Placeholder="Введіть дату"
+                               PlaceholderColor ="#c4c4c4"
+                           TextColor="#c4c4c4"
+                               Visual="Custom">
+                    <Entry.Behaviors>
+                        <fastEntry:XamarinFastEntryBehaviour Mask="##/##" MaxLength="5"/>
+                    </Entry.Behaviors>
+                </Entry>
+            </StackLayout>
+        </Frame>
+
+        <Frame HasShadow="false"
+                      Padding="10"
+                      BorderColor="LightGray"
+                      Margin="30,10,30,10"
+               BackgroundColor="{AppThemeBinding 
+                        Dark={StaticResource enterdark}, 
+                        Light={StaticResource enter}}"
+                      Grid.Row="3"
+                   CornerRadius="20"
+                      Grid.Column="0"
+                      Grid.ColumnSpan="3">
+            <StackLayout Orientation="Horizontal"  Spacing="15">
+                <Frame BackgroundColor="#FFFF74" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="2" Margin="5">
+                    <Image Source="note.png" Aspect="AspectFill" Margin="4" HeightRequest="30"/>
+                </Frame>
+                <Entry HorizontalOptions="FillAndExpand"
+                       x:Name="txtNote"
+                              Keyboard="Text"
+                              Placeholder="Примітка (не обов'язково)"
+                           MaxLength="20"
+                           PlaceholderColor ="#c4c4c4"
+                           TextColor="#c4c4c4"
+                              Visual="Custom">
+                </Entry>
+            </StackLayout>
+        </Frame>
+
+        <Frame HasShadow="false"
+                      Padding="10"
+                      BorderColor="LightGray"
+                      Margin="30,10,30,195"
+               BackgroundColor="{AppThemeBinding 
+                        Dark={StaticResource enterdark}, 
+                        Light={StaticResource enter}}"
+                      Grid.Row="4"
+                   CornerRadius="20"
+                      Grid.Column="0"
+                      Grid.ColumnSpan="3">
+            <StackLayout Orientation="Horizontal"  Spacing="14"
+                 Margin="0, -8" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Padding="10">
+                <Frame BackgroundColor="#FFFF74" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="2" Margin="5">
+                    <Image Source="category.png" Aspect="AspectFill" Margin="6" HeightRequest="30"/>
+                </Frame>
+                <telerikInput:RadListPicker x:Name="genrePicker"
+                                        Placeholder="Оберіть категорію"
+                                        HorizontalOptions="FillAndExpand"
+                                        ItemsSource="{Binding categories}"
+                                        IsLooping="True"
+                                        SelectionHighlightStyle="{StaticResource SelectionHighlightStyle}"
+                                        DisplayStringFormat="Ви обрали: {0}"
+                                        DisplayMemberPath="_category"
+                                        DisplayLabelStyle="{StaticResource displayLabelStyle}"
+                                        PlaceholderLabelStyle="{StaticResource placeholderLabelStyle}">
+                    <telerikInput:RadListPicker.ItemTemplate>
+                        <DataTemplate>
+                            <Label Text="{Binding _category}"
+                                   TextColor="{AppThemeBinding
+                        Dark={StaticResource text},
+                        Light={StaticResource textdark}}"
+                                HorizontalTextAlignment="Center"
+                                VerticalTextAlignment="Center"/>
+                        </DataTemplate>
+                    </telerikInput:RadListPicker.ItemTemplate>
+                    <telerikInput:RadListPicker.SelectorSettings>
+                        <telerikInput:PickerPopupSelectorSettings HeaderLabelText="Категорії:"
+                                                                HeaderStyle="{StaticResource HeaderStyle}"
+                                                                HeaderLabelStyle="{StaticResource HeaderLabelStyle}"/>
+                    </telerikInput:RadListPicker.SelectorSettings>
+                </telerikInput:RadListPicker>
+            </StackLayout>
+        </Frame>
+
+        <Button Text="Додати витрату?" TextColor="{AppThemeBinding
+                        Dark={StaticResource buttonsavedark},
+                        Light={StaticResource buttonsave}}" FontSize="Small" BackgroundColor="{AppThemeBinding 
+                        Dark={StaticResource enterdark}, 
+                        Light={StaticResource enter}}" Clicked="Button_Clicked"
+                Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" BorderWidth="1" BorderColor="{AppThemeBinding
+                        Dark={StaticResource text},
+                        Light={StaticResource textdark}}"
+                CornerRadius="30" HorizontalOptions="End" Margin="0,-150,45,100"/>
+
+        <BoxView HorizontalOptions="FillAndExpand"
+                         Color="#B5BBC2"
+                         Visual="Default"
+                         HeightRequest="1"
+                         Margin="0,0,0,0"
+                         Grid.Row="5"
+                         Grid.Column="0"
+                         Grid.ColumnSpan="3"/>
+
+        <Button Text="Зберегти"
+                         BackgroundColor="{AppThemeBinding 
+                        Dark={StaticResource buttonsavedark}, 
+                        Light={StaticResource buttonsave}}"
+                         CornerRadius="26"
+                         BorderColor="LightGray"
+                         FontSize="18"
+                         Grid.Row="6"
+                         Grid.Column="0"
+                         Grid.ColumnSpan="3"
+                         Clicked="Save_Clicked"
+                         Padding="20"
+                         TextColor="{AppThemeBinding
+                        Dark={StaticResource textdark}, 
+                        Light={StaticResource text}}"
+                         BorderWidth="2"
+                         Margin="30,20,30,100"/>
+    </Grid>
+</ContentPage>

@@ -2,13 +2,87 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BEEnance.Views.ItemDetailPage"
-             Title="{Binding Title}">
-
-    <StackLayout Spacing="20" Padding="15">
-        <Label Text="Text:" FontSize="Medium" />
-        <Label Text="{Binding Text}" FontSize="Small"/>
-        <Label Text="Description:" FontSize="Medium" />
-        <Label Text="{Binding Description}" FontSize="Small"/>
-    </StackLayout>
+             xmlns:vm="clr-namespace:BEEnance.ViewModels"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input" 
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             Title="Платежі"
+             BackgroundColor="{AppThemeBinding 
+                        Dark={StaticResource WindowBackgroundColorDark}, 
+                        Light={StaticResource WindowBackgroundColor}}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="text">black</Color>
+            <Color x:Key="textdark">#FFFF74</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     
+    <ContentPage.BindingContext>
+        <vm:AnalViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="setting.png" Command="{Binding Settings}"/>
+    </ContentPage.ToolbarItems>
+
+
+
+    <ScrollView>
+        <StackLayout Margin="20,35,20,20">
+            <CollectionView x:Name="collectionView"
+                                SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Frame
+                                        Grid.ColumnSpan="1">
+                                <Label Text="{Binding Type}"></Label>
+                            </Frame>
+                            <Label Text="Дата:" TextColor="{AppThemeBinding 
+                            Dark={StaticResource textdark}, 
+                            Light={StaticResource text}}" FontSize="Small" 
+                                       
+                                       Grid.Column="2"/>
+                            <Label Text="{Binding Date}"
+                                       TextColor="Silver"
+                                       FontSize="Small" 
+                                     
+                                       Grid.Column="2"/>
+                            <Label Text="Сума:" TextColor="{AppThemeBinding 
+                            Dark={StaticResource textdark}, 
+                            Light={StaticResource text}}" FontSize="Medium" 
+                                      
+                                       Grid.Column="2"/>
+                            <Label Text="{Binding Amount}"
+                                       TextColor="Silver"
+                                       FontSize="Medium" 
+                                       
+                                       Grid.Column="2"/>
+                            <Label Text="Категорія:" TextColor="{AppThemeBinding 
+                            Dark={StaticResource textdark}, 
+                            Light={StaticResource text}}" FontSize="Medium" 
+                                       
+                                       Grid.Column="2"/>
+                            <Label Text="{Binding Category}"
+                                       TextColor="Silver"
+                                       FontSize="Medium"
+                                       
+                                       Grid.Column="2"/>
+                            <Label Text="Нотатки:" TextColor="{AppThemeBinding 
+                            Dark={StaticResource textdark}, 
+                            Light={StaticResource text}}" FontSize="Medium" 
+                                       
+                                       Grid.Column="2"/>
+
+                            <Label Text="{Binding Notes}"
+                                       
+                                       Grid.Column="2"
+                                       TextColor="Silver"
+                                       FontSize="Medium" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ScrollView>
+
 </ContentPage>

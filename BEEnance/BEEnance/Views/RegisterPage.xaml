@@ -4,9 +4,9 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             NavigationPage.HasNavigationBar="False"
              x:Class="BEEnance.Views.RegisterPage"
-             Shell.NavBarIsVisible="False">
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False">
     <StackLayout BackgroundColor="#e6e6e6">
         <Grid>
             <StackLayout Padding="0" Margin="0" HorizontalOptions="FillAndExpand">
@@ -21,7 +21,7 @@
 
 
                         <StackLayout Margin="10">
-                            <Label Text="SIGN IN" TextColor="Black" HorizontalOptions="CenterAndExpand" FontSize="Large"/>
+                            <Label Text="РЕЄСТРАЦІЯ" TextColor="Black" HorizontalOptions="CenterAndExpand" FontSize="Large"/>
                         </StackLayout>
 
                         <StackLayout Padding="0" Margin="15,10">
@@ -32,17 +32,7 @@
                                         <Image Source="Username.png" Aspect="AspectFill" Margin="0"/>
                                     </Frame>
 
-                                    <Entry Placeholder="Username" x:Name="txtUsername" PlaceholderColor="Gray" TextColor="black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
-                                </StackLayout>
-                            </Frame>
-
-                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
-                                <StackLayout Orientation="Horizontal">
-                                    <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
-                                        <Image Source="Password.jpg" Aspect="AspectFill" Margin="0"/>
-                                    </Frame>
-
-                                    <Entry Placeholder="Password" x:Name="txtPassword" PlaceholderColor="Gray" IsPassword="True" TextColor="black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                    <Entry Placeholder="Ім'я користувача" x:Name="txtUsername" PlaceholderColor="Gray" TextColor="black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
                                 </StackLayout>
                             </Frame>
 
@@ -52,34 +42,25 @@
                                         <Image Source="Email.png" Aspect="AspectFill" Margin="0"/>
                                     </Frame>
 
-                                    <Entry Placeholder="Email" x:Name="txtEmail" PlaceholderColor="Gray" IsPassword="True" TextColor="black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                    <Entry Placeholder="Ел. пошта" x:Name="txtEmail" PlaceholderColor="Gray" IsPassword="False" TextColor="black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
                                 </StackLayout>
                             </Frame>
 
-
-                            <Button Text="REGISTER" BackgroundColor="#FFD800" TextColor="Black" CornerRadius="30" Clicked="Button_Clicked1" />
-                            <RelativeLayout  HorizontalOptions="Center">
-                                <Button Text="Already Registered?" Clicked="TapGestureRecognizer_Tapped" TextColor="DarkGray" FontSize="Micro" BackgroundColor="White" FontAttributes="Bold"
-                                        CornerRadius="30"  HeightRequest="35" HorizontalOptions="End" />
-                            </RelativeLayout>
-
-                            <StackLayout Margin="0,0,0,0" Padding="0">
-                                <Grid>
-                                    <BoxView BackgroundColor="DarkGray" HeightRequest="1" WidthRequest="150"  HorizontalOptions="Center" VerticalOptions="Center"/>
-                                    <Frame BackgroundColor="White" HeightRequest="45" WidthRequest="45" CornerRadius="360" HasShadow="False" BorderColor="DarkGray" Margin="0" HorizontalOptions="Center" Padding="0">
-                                        <Label Text="OR" TextColor="DarkGray" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Margin="0,0,0,10" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                                        <Image Source="Password.jpg" Aspect="AspectFill" Margin="0"/>
                                     </Frame>
-                                </Grid>
-                            </StackLayout>
 
-                            <StackLayout Margin="0,10" Orientation="Horizontal" HorizontalOptions="Center">
-                                <Frame BackgroundColor="White" HeightRequest="45" WidthRequest="45" CornerRadius="45" HasShadow="False" BorderColor="DarkGray" Margin="0" HorizontalOptions="Center" Padding="0">
-                                    <ImageButton Source="Facebook.jpg" Aspect="AspectFill" Margin="0"/>
-                                </Frame>
-                                <Frame BackgroundColor="White" HeightRequest="45" WidthRequest="45" CornerRadius="45" HasShadow="False" BorderColor="DarkGray" Margin="0" HorizontalOptions="Center" Padding="0">
-                                    <ImageButton Source="Google.jpg" Aspect="AspectFill" Margin="0"/>
-                                </Frame>
-                            </StackLayout>
+                                    <Entry Placeholder="Пароль" x:Name="txtPassword" PlaceholderColor="Gray" IsPassword="True" TextColor="black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Button Text="ЗАРЕЄСТРУВАТИСЬ" BackgroundColor="#FFD800" TextColor="Black" CornerRadius="30" Clicked="Button_Clicked1"/>
+                            <RelativeLayout  HorizontalOptions="Center" Margin="0,0,0,5">
+                                <Button Text="Вже зареєстровані?" Clicked="TapGestureRecognizer_Tapped" TextColor="DarkGray" FontSize="Small" BackgroundColor="White"
+                                        CornerRadius="30"  HeightRequest="35" HorizontalOptions="End" Margin="0"/>
+                            </RelativeLayout>
 
                         </StackLayout>
                     </StackLayout>

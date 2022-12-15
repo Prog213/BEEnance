@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BEEnance.Views.ProfilePage"
+             xmlns:vm="clr-namespace:BEEnance.ViewModels"
+             Title="Мій профіль"
+             BackgroundColor="{AppThemeBinding 
+                        Dark={StaticResource WindowBackgroundColorDark}, 
+                        Light={StaticResource WindowBackgroundColor}}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="buttondark">white</Color>
+            <Color x:Key="button">black</Color>
+            <Color x:Key="text">Blue</Color>
+            <Color x:Key="textdark">#FFD800</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.BindingContext>
+        <vm:AnalViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="setting.png" Command="{Binding Settings}"/>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+        <Button Text="Підключити МоноБанк" BackgroundColor="#FFD800" TextColor="Black" CornerRadius="30" Clicked="Button_Clicked" Margin="10,20,10,0"/>
+
+        <Button Text="Log out" BackgroundColor="{AppThemeBinding 
+                        Dark={StaticResource buttondark}, 
+                        Light={StaticResource button}}" TextColor="{AppThemeBinding 
+                        Dark={StaticResource button}, 
+                        Light={StaticResource buttondark}}" CornerRadius="30" Clicked="LogOutClicked" Margin="120,20,120,0"/>
+        <Frame HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent" Margin="0">
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Підтримати проєкт? Тикни на мене :)" TextColor="{AppThemeBinding 
+                        Dark={StaticResource textdark}, 
+                        Light={StaticResource text}}" FontSize="Subtitle">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding TapCommand}" CommandParameter="https://donatello.to/BEEnance" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </Frame>
+    </StackLayout>
+</ContentPage>

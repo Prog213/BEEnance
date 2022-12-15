@@ -8,7 +8,7 @@
     BackgroundColor="{AppThemeBinding
                     Dark={StaticResource WindowBackgroundColorDark}, 
                     Light={StaticResource WindowBackgroundColor}}">
-    
+
     <ContentPage.BindingContext>
         <vm:AnalViewModel />
     </ContentPage.BindingContext>
@@ -16,7 +16,8 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="setting.png" Command="{Binding Settings}"/>
     </ContentPage.ToolbarItems>
-    <StackLayout>
+    <ScrollView>
+        <StackLayout>
         <Label Text="Діаграма витрат" FontSize="Large"  VerticalOptions="Start" HorizontalOptions="Center" TextColor="{AppThemeBinding Dark={StaticResource TextColorDark},
                     Light={StaticResource TextColor}}" Margin="10"/>
         <Charts:ChartView x:Name="ChartV" HeightRequest="300" VerticalOptions="Start" HorizontalOptions="Fill" />
@@ -25,4 +26,5 @@
                     Light={StaticResource TextColor}}" Margin="15"/>
         <Charts:ChartView x:Name="ChartD" HeightRequest="300" VerticalOptions="Start" HorizontalOptions="Fill" />
     </StackLayout>
+    </ScrollView>
 </ContentPage>
