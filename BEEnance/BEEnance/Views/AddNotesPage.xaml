@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:fastEntry="clr-namespace:XamarinFastEntrySample.FastEntry;assembly=XamarinFastEntry.Behaviors"
+             x:Class="BEEnance.Views.AddNotesPage" 
+             Title="Додати нотатки"
+             BackgroundColor="{AppThemeBinding 
+                        Dark={StaticResource WindowBackgroundColorDark}, 
+                        Light={StaticResource WindowBackgroundColor}}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="buttonsave">black</Color>
+            <Color x:Key="buttonsavedark">#FFFF74</Color>
+            <Color x:Key="text">white</Color>
+            <Color x:Key="textdark">black</Color>
+            <Color x:Key="enter">white</Color>
+            <Color x:Key="enterdark">#3A3B3C</Color>
+
+            <Style TargetType="Label" x:Key="placeholderLabelStyle">
+                <Setter Property="TextColor" Value="#c4c4c4"/>
+                <Setter Property="Visual" Value="Custom"/>
+            </Style>
+            <Style TargetType="Label" x:Key="displayLabelStyle">
+                <Setter Property="TextColor" Value="#c4c4c4"/>
+            </Style>
+            <Style TargetType="Label" x:Key="HeaderLabelStyle">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="21"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid VerticalOptions="FillAndExpand"
+              ColumnSpacing="20"
+              HorizontalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+
+        <Frame HasShadow="false"
+                      Padding="10"
+                      BorderColor="LightGray"
+                      Margin="30,30,30,10"
+                      Grid.Row="1"
+                   CornerRadius="20"
+               BackgroundColor="{AppThemeBinding 
+                        Dark={StaticResource enterdark}, 
+                        Light={StaticResource enter}}"
+                      Grid.Column="0"
+                      Grid.ColumnSpan="3">
+            <StackLayout Orientation="Horizontal"
+                               Spacing="15">
+                <Frame BackgroundColor="#FFFF74" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="2" Margin="5">
+                    <Image Source="note.png" Aspect="AspectFill" Margin="4" HeightRequest="30"/>
+                </Frame>
+                <Entry HorizontalOptions="FillAndExpand"
+                        x:Name="txtNote"
+                               Keyboard="Text"
+                               PlaceholderColor ="#c4c4c4"
+                           Placeholder="Нотатка:"
+                           TextColor="#c4c4c4"
+                               Visual="Custom"
+                       MaxLength="150">
+                </Entry>
+            </StackLayout>
+        </Frame>
+        <Frame HasShadow="false"
+                      Padding="10"
+               BackgroundColor="{AppThemeBinding 
+                        Dark={StaticResource enterdark}, 
+                        Light={StaticResource enter}}"
+                      BorderColor="LightGray"
+                      Margin="30,0,0,0"
+                      Grid.Row="2"
+                      Grid.Column="0"
+                      Grid.ColumnSpan="1"
+                   CornerRadius="20">
+            <StackLayout Orientation="Horizontal"  Spacing="15">
+                <Frame BackgroundColor="#FFFF74" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="2" Margin="5">
+                    <Image Source="calendar.png" Aspect="AspectFill" Margin="6" HeightRequest="30"/>
+                </Frame>
+                <Entry HorizontalOptions="FillAndExpand"
+                       x:Name="txtDate"
+                               Keyboard="Numeric"
+                           Placeholder="Введіть дату"
+                               PlaceholderColor ="#c4c4c4"
+                           TextColor="#c4c4c4"
+                               Visual="Custom">
+                    <Entry.Behaviors>
+                        <fastEntry:XamarinFastEntryBehaviour Mask="##/##" MaxLength="5"/>
+                    </Entry.Behaviors>
+                </Entry>
+            </StackLayout>
+        </Frame>
+
+        <Button Text="Показати ваші нотатки?" TextColor="{AppThemeBinding
+                        Dark={StaticResource buttonsavedark},
+                        Light={StaticResource buttonsave}}" FontSize="Small" BackgroundColor="{AppThemeBinding 
+                        Dark={StaticResource enterdark}, 
+                        Light={StaticResource enter}}" 
+                Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" BorderWidth="1" BorderColor="{AppThemeBinding
+                        Dark={StaticResource text},
+                        Light={StaticResource textdark}}" Clicked="Button_Clicked"
+                CornerRadius="30" HorizontalOptions="End" Margin="30,30,30,30"/>
+
+        <Button Text="Зберегти"
+                         BackgroundColor="{AppThemeBinding 
+                        Dark={StaticResource buttonsavedark}, 
+                        Light={StaticResource buttonsave}}"
+                         CornerRadius="26"
+                         BorderColor="LightGray"
+                         FontSize="18"
+                         Grid.Row="5"
+                         Grid.Column="0"
+                         Grid.ColumnSpan="3"
+                         Clicked="Save_Clicked"
+                         Padding="20"
+                         TextColor="{AppThemeBinding
+                        Dark={StaticResource textdark}, 
+                        Light={StaticResource text}}"
+                         BorderWidth="2"
+                         Margin="30,30,30,300"/>
+    </Grid>
+</ContentPage>

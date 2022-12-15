@@ -1,5 +1,8 @@
-﻿using BEEnance.ViewModels;
+﻿using BEEnance.Models;
+using BEEnance.ViewModels;
+using System;
 using System.ComponentModel;
+using System.Linq;
 using Xamarin.Forms;
 
 namespace BEEnance.Views
@@ -9,7 +12,21 @@ namespace BEEnance.Views
         public ItemDetailPage()
         {
             InitializeComponent();
-            BindingContext = new ItemDetailViewModel();
         }
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            collectionView.ItemsSource = await App.BeenanceDB.GetTransactions();
+        }
+        //private async void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
+        //    if (e.CurrentSelection != null)
+        //    {
+        //        // сюди треба якусь перевірку на інкам/експенс
+        //        Expenses expenses = (Expenses)e.CurrentSelection.FirstOrDefault();
+        //        await Shell.Current.GoToAsync(
+        //            $"{nameof(TransactionInfoPage)}?{nameof(TransactioAddingPage.ItemId)}={Expenses.Id.ToString()}");
+        //    }
+        //}
     }
 }

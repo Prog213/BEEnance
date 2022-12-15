@@ -5,16 +5,17 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="BEEnance.Views.LoginPage"
-             Shell.NavBarIsVisible="False">
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False">
     <StackLayout BackgroundColor="#e6e6e6">
         <Grid>
             <StackLayout Padding="0" Margin="0" HorizontalOptions="FillAndExpand">
                 <Frame HeightRequest="150" BackgroundColor="LightGray" Padding="0" Margin="0">
-                    <Image Source="https://cdn.discordapp.com/attachments/431115856332849153/1038913549357023416/photo-1568526381923-caf3fd520382_1.jpg" Aspect="AspectFill" Margin="0"/>
+                    <Image Source="Bee.jpg" Aspect="AspectFill" Margin="0"/>
                 </Frame>
             </StackLayout>
             <StackLayout Padding="0" Margin="10,100,10,0" HorizontalOptions="FillAndExpand">
-                <Frame  BackgroundColor="White" HasShadow="True" Padding="0" Margin="0">
+                <Frame BackgroundColor="White" HasShadow="True" Padding="0" Margin="0">
 
                     <StackLayout>
 
@@ -23,12 +24,12 @@
                             <Label Text="ВХІД" TextColor="Black" HorizontalOptions="CenterAndExpand" FontSize="Large"/>
                         </StackLayout>
 
-                        <StackLayout Padding="0" Margin="15,10">
+                        <StackLayout Padding="0" Margin="15,0">
 
                             <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                 <StackLayout Orientation="Horizontal">
                                     <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
-                                        <Image Source="https://www.findool.com/images/avatars/avatar.png" Aspect="AspectFill" Margin="0"/>
+                                        <Image Source="Username.png" Aspect="AspectFill" Margin="0"/>
                                     </Frame>
 
                                     <Entry Placeholder="Ім'я користувача" x:Name="txtUsername" PlaceholderColor="Gray" TextColor="black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
@@ -38,33 +39,20 @@
                             <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                 <StackLayout Orientation="Horizontal">
                                     <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
-                                        <Image Source="https://images.all-free-download.com/images/graphicthumb/lock_icon_6813906.jpg" Aspect="AspectFill" Margin="0"/>
+                                        <Image Source="Password.jpg" Aspect="AspectFill" Margin="0"/>
                                     </Frame>
 
                                     <Entry Placeholder="Пароль" x:Name="txtPassword" PlaceholderColor="Gray" IsPassword="True" TextColor="black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
                                 </StackLayout>
                             </Frame>
 
-                            <Button Text="УВІЙТИ" BackgroundColor="#FFD800" TextColor="Black" CornerRadius="30" Clicked="Button_Clicked" />
+                            <Button Text="УВІЙТИ" BackgroundColor="#FFD800" TextColor="Black" CornerRadius="30" Clicked="Button_Clicked" Margin="0,10,0,0"/>
                             <RelativeLayout  HorizontalOptions="Center">
                                 <Button Text="Ще не зареєстровані?" Clicked="TapGestureRecognizer_Tapped" TextColor="DarkGray" FontSize="Small" BackgroundColor="White"
-                                        CornerRadius="30"  HeightRequest="35" HorizontalOptions="End" Margin="5"/>
+                                        CornerRadius="30"  HeightRequest="35" HorizontalOptions="End" Margin="0"/>
                             </RelativeLayout>
 
-                            <StackLayout Margin="0,25,0,0" Padding="0">
-                                <Grid>
-                                    <BoxView BackgroundColor="DarkGray" HeightRequest="1" WidthRequest="150"  HorizontalOptions="Center" VerticalOptions="Center"/>
-                                    <Frame BackgroundColor="White" HeightRequest="45" WidthRequest="45" CornerRadius="45" HasShadow="False" BorderColor="DarkGray" Margin="0" HorizontalOptions="Center" Padding="0">
-                                        <Label Text="АБО" TextColor="DarkGray" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
-                                    </Frame>
-                                </Grid>
-                            </StackLayout>
-
-                            <StackLayout Margin="0,25" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-                                <Frame BackgroundColor="White" HeightRequest="55" WidthRequest="45" CornerRadius="55" HasShadow="False" BorderColor="DarkGray" Margin="0" HorizontalOptions="Center" Padding="0">
-                                    <ImageButton Source="https://blog.hubspot.com/hubfs/image8-2.jpg" Aspect="AspectFill" Margin="0"/>
-                                </Frame>
-                            </StackLayout>
+                            <StackLayout Margin="50,50,0,0" Padding="0"/>
 
                         </StackLayout>
                     </StackLayout>
