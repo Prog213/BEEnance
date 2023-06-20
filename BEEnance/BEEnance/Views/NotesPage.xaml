@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BEEnance.Views.NotesPage"
+             xmlns:vm="clr-namespace:BEEnance.ViewModels"
+             Title="Ваші нотатки"
+             BackgroundColor="{AppThemeBinding 
+                        Dark={StaticResource WindowBackgroundColorDark}, 
+                        Light={StaticResource WindowBackgroundColor}}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="text">black</Color>
+            <Color x:Key="textdark">#FFFF74</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.BindingContext>
+        <vm:AnalViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="setting.png" Command="{Binding Settings}"/>
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+        <StackLayout Margin="20,35,20,20">
+            <CollectionView x:Name="collectionView"
+                            SelectionMode="Multiple">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Label Text="Дата:" TextColor="{AppThemeBinding 
+                        Dark={StaticResource textdark}, 
+                        Light={StaticResource text}}" FontSize="Small" />
+                            <Label Text="{Binding Date}"
+                                   TextColor="Silver"
+                                   FontSize="Small" />
+                            <Label Text="Нотатка:" TextColor="{AppThemeBinding 
+                        Dark={StaticResource textdark}, 
+                        Light={StaticResource text}}" FontSize="Medium" />
+                            <Label Text="{Binding Note}"
+                                   TextColor="Silver"
+                                   FontSize="Medium" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
